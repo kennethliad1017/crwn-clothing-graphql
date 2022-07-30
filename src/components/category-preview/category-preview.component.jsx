@@ -1,6 +1,6 @@
 import ProductCard from "../product-card/product-card.component";
 
-import "./categories-preview.styles.scss";
+import "./category-preview.styles.scss";
 
 const CategoryPreview = ({ title, products }) => {
   return (

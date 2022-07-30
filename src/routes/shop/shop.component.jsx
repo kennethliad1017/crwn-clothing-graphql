@@ -3,7 +3,7 @@ import { useContext } from "react";
 import "./shop.styles.scss";
 
 import { CategoriesContext } from "../../contexts/categories.context";
-import CategoryPreview from "../../components/categories-preview/categories-preview.component";
+import CategoryPreview from "../../components/category-preview/category-preview.component";
 
 const Shop = () => {
   const { categoriesMap } = useContext(CategoriesContext);
