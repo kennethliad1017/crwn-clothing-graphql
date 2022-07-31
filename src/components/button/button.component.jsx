@@ -1,29 +1,31 @@
 import {
-  NormalButton,
+  BaseButton,
   InvertedButton,
-  GoogleSignButton,
+  GoogleSignInButton,
 } from "./button.styles";
 
-const BUTTON_TYPES_CLASSES = {
+export const BUTTON_TYPES_CLASSES = {
+  base: "base",
   google: "google-sign-in",
   inverted: "inverted",
 };
 
+const getButton = (buttonType = BUTTON_TYPES_CLASSES.base) =>
+  ({
+    [BUTTON_TYPES_CLASSES.base]: BaseButton,
+    [BUTTON_TYPES_CLASSES.google]: GoogleSignInButton,
+    [BUTTON_TYPES_CLASSES.inverted]: InvertedButton,
+  }[buttonType]);
+
 /**
  *
- * @param {(children: React.ReactElement, buttonType: 'google' | 'inverted' | undefined, ...otherProps: React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>)} props {children, buttonType, ...otherProps}
+ * @param {(children: React.ReactElement, buttonType: 'google' | 'inverted' | 'base', ...otherProps: React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>)} props {children, buttonType, ...otherProps}
  * @returns JSX.Element
  */
 const Button = ({ children, buttonType, ...otherProps }) => {
-  if (buttonType === "google") {
-    return <GoogleSignButton {...otherProps}>{children}</GoogleSignButton>;
-  }
+  const CustomButton = getButton(buttonType);
 
-  if (buttonType === "inverted") {
-    return <InvertedButton {...otherProps}>{children}</InvertedButton>;
-  }
-
-  return <NormalButton {...otherProps}>{children}</NormalButton>;
+  return <CustomButton {...otherProps}>{children}</CustomButton>;
 };
 
 export default Button;
