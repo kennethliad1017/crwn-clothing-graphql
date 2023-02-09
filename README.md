@@ -6,6 +6,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+# How to use
+
+    ### without graphql
+        - create firebase in web and add firebaseConfig to src/utils/firebase/firebase.utils.js
+        - create collection named categories
+        - create document id named title in lower case. (NOTE: See src/shop-data.js)
+        - document should have the title and items
+
+    # with graphl
+        - checkout lesson-2
+        - Add firebaseConfig web platform to src/utils/firebase/firebase.utils.js for signin or signup to work
+
 ### `yarn start`
 
 Runs the app in the development mode.\
