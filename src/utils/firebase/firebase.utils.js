@@ -25,19 +25,7 @@ import {
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDkLJvdbPTO9X0E6oxJhYiiDt0w0XfaAuk",
-
-  authDomain: "crwn-clothing-db-e0a47.firebaseapp.com",
-
-  projectId: "crwn-clothing-db-e0a47",
-
-  storageBucket: "crwn-clothing-db-e0a47.appspot.com",
-
-  messagingSenderId: "910146561837",
-
-  appId: "1:910146561837:web:a14754af060a742e9a95a4",
-
-  measurementId: "G-H9Q72TCQL6",
+  // firebaseConfig for web goes here
 };
 
 // Initialize Firebase
