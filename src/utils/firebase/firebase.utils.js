@@ -25,7 +25,7 @@ import {
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  // firebase config goes here
+  // firebaseConfig for web goes here
 };
 
 // Initialize Firebase
